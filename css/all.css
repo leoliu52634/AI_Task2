@@ -76,10 +76,10 @@ body {
   display: flex;
   padding: 20px 0px;
 }
-.header img {
+.header a img {
   flex-grow: 1;
   display: block;
-  width: 188.99px;
+  width: 245.99px;
   height: 40px;
 }
 .header ul {
@@ -153,7 +153,7 @@ nav .nav_card_list {
 nav .nav_card_list .nav_card {
   border: 1px solid #525252;
   border-radius: 16px;
-  width: 416px;
+  max-width: 416px;
   height: 366px;
 }
 nav .nav_card_list .nav_card .nav_card_img {
@@ -189,13 +189,13 @@ article h4 {
   line-height: 1.2;
 }
 article .article_logo1 .article_logo1_pic img {
-  width: 160px;
+  max-width: 160px;
 }
 article .article_logo2 {
   margin-bottom: 160px;
 }
 article .article_logo2 .article_logo2_pic img {
-  width: 160px;
+  max-width: 160px;
 }
 article .article_logo3_list {
   display: flex;
@@ -203,7 +203,7 @@ article .article_logo3_list {
   gap: 24px;
 }
 article .article_logo3_list .article_logo3 {
-  width: 416px;
+  max-width: 416px;
   height: 400px;
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0px 100px 80px rgba(18, 18, 18, 0.07), 0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198), 0px 22.3363px 17.869px rgba(18, 18, 18, 0.0417275), 0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035), 0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725), 0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
@@ -250,12 +250,11 @@ article .article_logo3_list .article_logo3 .article_logo3_info .article_logo3_in
 }
 article .Task1_Card {
   width: 100%;
-  height: 1918px;
-  left: 0px;
-  top: 0px;
+  overflow: hidden;
   background: #FFFFFF;
   border-radius: 160px;
   margin-top: 160px;
+  padding: 160px 15px;
   /*任務一    *********************/
   /*任務一    *********************/
 }
@@ -266,95 +265,77 @@ article .Task1_Card h2 {
   line-height: 1.2;
   text-align: center;
   color: #020202;
-  padding: 160px 5px 80px 5px;
+  margin-bottom: 80px;
 }
-article .Task1_Card .div_search {
-  background: #FFFFFF;
-  border-radius: 160px;
-  padding: 20px 40px;
-  display: block;
-  position: relative;
-  margin-bottom: 30px;
-}
-article .Task1_Card .div_search .search_key {
-  width: 1200px;
+article .Task1_Card .search_key {
+  width: 100%;
   background: #F2F2F2;
   border-radius: 16px;
   height: 64px;
-  padding: 5px 0px 0px 43px;
+  padding: 20px 40px 20px 76px;
+  display: flex;
 }
-article .Task1_Card .div_search .search_key #txt_search {
-  background: #F2F2F2;
-  width: 1000px;
-  border: 0px;
-}
-article .Task1_Card .div_search .search_menu {
+article .Task1_Card .search_key img {
   display: block;
-  justify-content: space-between;
-  padding: 24px 0px 40px 0px;
 }
-article .Task1_Card .div_search .search_menu .search_menu_a {
-  border: 1px solid #F2F2F2;
-  border-radius: 16px;
-  flex-grow: 1;
-  padding: 20px 40px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_a a {
-  text-decoration: none;
+article .Task1_Card .search_key #txt_search {
+  display: block;
+  background: #F2F2F2;
+  width: 100%;
+  border: 0px;
+  outline: none;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #020202;
 }
-article .Task1_Card .div_search .search_menu .search_menu_b {
-  flex-grow: 8;
-  margin-left: 228px;
-  margin-right: 228px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_b .search_menu_b_list {
+article .Task1_Card .search_menu {
   display: flex;
   justify-content: space-between;
+  padding: 24px 0px 40px 0px;
+  align-items: center;
+}
+article .Task1_Card .search_menu button {
+  border: 1px solid #F2F2F2;
+  border-radius: 16px;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+article .Task1_Card .search_menu .search_menu_b .search_menu_b_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+article .Task1_Card .search_menu .search_menu_b .search_menu_b_list li {
+  padding: 8px 16px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #919191;
 }
-article .Task1_Card .div_search .search_menu .search_menu_c {
-  border: 1px solid #F2F2F2;
-  border-radius: 16px;
-  margin: 0 auto;
-  text-align: center;
-  flex-grow: 1;
-  padding: 20px 40px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_c a {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #020202;
-}
-article .Task1_Card .card-list {
+article .Task1_Card .card_list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px 24px;
 }
 article .Task1_Card .card {
-  width: 380px;
+  max-width: 380px;
   border: 1px solid #F2F2F2;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-article .Task1_Card .img-container {
+article .Task1_Card .img_container {
   width: 100%;
 }
-article .Task1_Card .img-container img {
+article .Task1_Card .img_container img {
   display: block;
 }
 article .Task1_Card .card_content {
@@ -473,12 +454,12 @@ footer .footer_end .footer_end_c {
 }
 
 /* mobile =========================================== */
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 276px) and (max-width: 576px) {
   .header {
     display: flex;
-    padding: 20px;
+    padding: 10px;
   }
-  .header img {
+  .header a img {
     flex-grow: 1;
     display: block;
     width: 188.99px;
@@ -497,190 +478,285 @@ footer .footer_end .footer_end_c {
     width: 18px;
     height: 12px;
   }
-}
-.header_title {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 1.2;
-  padding: 40px 0px;
-}
-
-.header_logo_r {
-  padding-right: 50px;
-  margin-bottom: 160px;
-}
-.header_logo_r img {
-  width: 130px;
-  height: 130px;
-}
-
-nav .nav_title_info {
-  display: block;
-  margin-bottom: 48px;
-}
-nav .nav_title_info h4 {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-nav .nav_title_info h3 {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-article .Task1_Card {
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  margin-top: 156px;
-}
-article .Task1_Card h2 {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 1.2;
-  color: #020202;
-  padding: 80px 50px 32px 50px;
-}
-article .Task1_Card .div_search {
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 20px 40px;
-  display: block;
-  position: relative;
-  margin-bottom: 30px;
-}
-article .Task1_Card .div_search .search_key {
-  width: 100%;
-  background: #F2F2F2;
-  border-radius: 16px;
-  height: 64px;
-  padding: 5px 0px 0px 43px;
-}
-article .Task1_Card .div_search .search_key #txt_search {
-  background: #F2F2F2;
-  width: 300px;
-  border: 0px;
-}
-article .Task1_Card .div_search .search_menu {
-  display: block;
-  justify-content: space-between;
-  padding: 24px 0px 40px 0px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_a {
-  border: 1px solid #F2F2F2;
-  border-radius: 16px;
-  flex-grow: 1;
-  padding: 20px 40px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_a a {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #020202;
-}
-article .Task1_Card .div_search .search_menu .search_menu_b {
-  flex-grow: 8;
-  margin-left: 228px;
-  margin-right: 228px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_b .search_menu_b_list {
-  display: flex;
-  justify-content: space-between;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #919191;
-}
-article .Task1_Card .div_search .search_menu .search_menu_c {
-  border: 1px solid #F2F2F2;
-  border-radius: 16px;
-  margin: 0 auto;
-  text-align: center;
-  flex-grow: 1;
-  padding: 20px 40px;
-}
-article .Task1_Card .div_search .search_menu .search_menu_c a {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #020202;
-}
-article .card-list {
-  display: block;
-}
-
-footer h3 {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 40px;
-}
-footer .footer_cta {
-  padding: 20px 32px;
-  margin: 0 auto;
-  width: 188px;
-  text-align: center;
-  border: 1px solid #FFFFFF;
-  border-radius: 16px;
-  margin-bottom: 180px;
-}
-footer .footer_cta a.btn {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 1.2;
-  margin-right: 12px;
-}
-footer .footer_logo {
-  margin-top: 80px;
-  margin-bottom: 80px;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-}
-footer .footer_logo .footer_logo_a {
-  margin-top: 40px;
-}
-footer .footer_logo .footer_logo_a .footer_list {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 1.2;
-}
-footer .footer_logo .footer_logo_b img {
-  width: 200px;
-  height: 40px;
-}
-footer .footer_end {
-  display: flex;
-  justify-content: space-between;
-  padding: 32px 0px;
-}
-footer .footer_end .footer_end_a {
-  flex-grow: 1;
-}
-footer .footer_end .footer_end_b {
-  flex-grow: 8;
-}
-footer .footer_end .footer_end_c {
-  flex-grow: 1;
-  text-align: right;
+  .header_title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1.2;
+    padding: 40px 0px;
+  }
+  .header_logo_r {
+    padding-right: 20px;
+    margin-bottom: 160px;
+    width: 100%;
+  }
+  .header_logo_r img {
+    width: 100px;
+    height: 100px;
+  }
+  nav .nav_title_info {
+    display: block;
+    margin-bottom: 48px;
+  }
+  nav .nav_title_info h4 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  nav .nav_title_info h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  nav .nav_card_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 160px;
+  }
+  nav .nav_card_list .nav_card {
+    width: 100%;
+  }
+  nav .nav_card_list .nav_card .nav_card_img {
+    padding: 80px 10px 0px 10px;
+  }
+  nav .nav_card_list .nav_card .nav_card_img img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  nav .nav_card_list .nav_card .nav_card_info h4 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.2;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+  nav .nav_card_list .nav_card .nav_card_info p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0px 20px;
+  }
+  article .article_logo1 .article_logo1_pic {
+    width: 100%;
+  }
+  article .article_logo2 .article_logo2_pic {
+    width: 100%;
+  }
+  article .article_logo3_list .article_logo3 {
+    width: 100%;
+  }
+  article .article_logo3_list .article_logo3 .article_logo3_img {
+    padding: 40px 10px 0px 10px;
+  }
+  article .article_logo3_list .article_logo3 .article_logo3_info .article_logo3_info_list .article_logo3_info_b {
+    padding: 40px 8px;
+  }
+  article .Task1_Card {
+    width: 100%;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin-top: 160px;
+    padding: 160px 15px;
+    /*任務一    *********************/
+  }
+  article .Task1_Card h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 1.2;
+    text-align: center;
+    color: #020202;
+    margin-bottom: 80px;
+  }
+  article .Task1_Card .search_key {
+    width: 100%;
+    background: #F2F2F2;
+    border-radius: 16px;
+    height: 64px;
+    padding: 20px 20px;
+    display: flex;
+  }
+  article .Task1_Card .search_key img {
+    display: block;
+  }
+  article .Task1_Card .search_key #txt_search {
+    display: block;
+    background: #F2F2F2;
+    width: 100%;
+    border: 0px;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  article .Task1_Card .search_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px 40px 0px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  article .Task1_Card .search_menu button {
+    border: 1px solid #F2F2F2;
+    border-radius: 16px;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  article .Task1_Card .search_menu .search_menu_b .search_menu_b_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  article .Task1_Card .search_menu .search_menu_b .search_menu_b_list li {
+    padding: 8px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #919191;
+  }
+  article .Task1_Card .card_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px 24px;
+  }
+  article .Task1_Card .card {
+    max-width: 380px;
+    border: 1px solid #F2F2F2;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  article .Task1_Card .img_container {
+    width: 100%;
+  }
+  article .Task1_Card .img_container img {
+    display: block;
+  }
+  article .Task1_Card .card_content {
+    flex-grow: 1;
+    padding: 10px 32px;
+  }
+  article .Task1_Card .card_content h3 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #020202;
+    margin-bottom: 12px;
+  }
+  article .Task1_Card .card_content p {
+    font-size: 14px;
+    color: #525252;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  article .Task1_Card .card_info {
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid #F2F2F2;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 10px 32px;
+  }
+  article .Task1_Card .card_info h4 {
+    font-weight: 700;
+    color: #020202;
+    font-size: 16px;
+  }
+  article .Task1_Card .card_info p {
+    font-weight: 400;
+    color: #020202;
+  }
+  article .Task1_Card .card_tag {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid #F2F2F2;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #020202;
+    padding: 10px 32px;
+  }
+  article .Task1_Card .share {
+    text-decoration: none;
+    color: black;
+  }
+  footer h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  footer .footer_cta {
+    padding: 20px 16px;
+    margin: 0 auto;
+    width: 188px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 180px;
+  }
+  footer .footer_cta a.btn {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-right: 12px;
+  }
+  footer .footer_logo {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  footer .footer_logo .footer_logo_a {
+    margin-top: 40px;
+  }
+  footer .footer_logo .footer_logo_a .footer_list {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  footer .footer_logo .footer_logo_b img {
+    width: 200px;
+    height: 40px;
+  }
+  footer .footer_end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px 0px;
+  }
+  footer .footer_end .footer_end_a {
+    flex-grow: 1;
+  }
+  footer .footer_end .footer_end_b {
+    flex-grow: 8;
+  }
+  footer .footer_end .footer_end_c {
+    flex-grow: 1;
+    text-align: right;
+  }
 }/*# sourceMappingURL=all.css.map */
